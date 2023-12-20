@@ -5,6 +5,8 @@ import { OuterRoutingModule } from './outer-routing.module';
 import { LoginComponent } from './login/login.component';
 import { OuterHeaderComponent } from '../layout/outerlayout/header/header.component';
 import { OuterFooterComponent } from '../layout/outerlayout/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -14,6 +16,10 @@ import { OuterFooterComponent } from '../layout/outerlayout/footer/footer.compon
   imports: [
     CommonModule,
     OuterRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
+
 export class OuterModule { }

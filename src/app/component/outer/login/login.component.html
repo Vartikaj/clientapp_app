@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" >
+    <div class="container">
+        <div class="row">
+            <h3>LOGIN FORM</h3>
+            <mat-form-field class="col-lg-12">
+                <!-- <mat-label>Username</mat-label> -->
+                <input matInput formControlName = "username">
+                <!-- <mat-error *ngIf="loginForm.get('username')?.hasError('required')">Username is required</mat-error>
+                <mat-error *ngIf = "loginForm.get('password')?.hasError('pattern')">Username must contain letters (uppers or lower case), space or dot(.).</mat-error> -->
+            </mat-form-field>
+        </div>
+    </div>
+</form>
