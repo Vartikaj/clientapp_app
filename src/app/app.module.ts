@@ -8,13 +8,18 @@ import { HeaderComponent } from './component/layout/adminlayout/header/header.co
 import { OuterHeaderComponent } from './component/layout/outerlayout/header/header.component';
 import { FooterComponent } from './component/layout/adminlayout/footer/footer.component';
 import { OuterFooterComponent } from './component/layout/outerlayout/footer/footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-
-import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+// import { MatCardModule } from '@angular/material/card';
+// import { MatButtonModule} from '@angular/material/button';
+// import { MatMenuModule } from '@angular/material/menu';
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatIconModule } from '@angular/material/icon';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatSelectModule } from '@angular/material/select';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,9 +37,14 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
+    // MatFormFieldModule,
+    // MatInputModule,
+    // MatSelectModule,
+    // MatIconModule,
+    // MatToolbarModule,
+    // MatMenuModule,
+    // MatButtonModule,
+    // MatCardModule,
     RouterModule.forRoot([])
   ],
   providers: [

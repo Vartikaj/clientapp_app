@@ -1,0 +1,47 @@
+<form [formGroup] = "registrationForm">
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="row">
+            <mat-form-field class="col-lg-6">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName = "fullName">
+                <mat-error *ngIf = "registrationForm.get('fullName')?.hasError('required')">Full Name is Required</mat-error>
+                <mat-error *ngIf = "registrationForm.get('fullName')?.hasError('pattern')">Full name must contain only upper or lower case letter</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="col-lg-6">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName = "username">
+                <mat-error *ngIf = "registrationForm.get('username')?.hasError('required')">Username is Required</mat-error>
+                <mat-error *ngIf = "registrationForm.get('username')?.hasError('pattern')">Username must contain only upper or lower case letter</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="col-lg-6">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName = "email">
+                <mat-error *ngIf = "registrationForm.get('email')?.hasError('required')">Email is Required</mat-error>
+                <mat-error *ngIf = "registrationForm.get('email')?.hasError('pattern')">Email is not valid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="col-lg-6">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName = "phoneNumber">
+                <mat-error *ngIf = "registrationForm.get('phoneNumber')?.hasError('required')">Phone Number is Required</mat-error>
+                <mat-error *ngIf = "registrationForm.get('phoneNumber')?.hasError('pattern')">Phone Number must contain only 0-9 digits</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="col-lg-6">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName = "password" [type] = "hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click) = "hide == !hide">{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                <mat-error *ngIf = "registrationForm.get('password')?.hasError('required')">Password is Required</mat-error>
+                <mat-error *ngIf = "registrationForm.get('password')?.hasError('pattern')">Password must contain at least one uppercase, lowercase letter as well as digits and at least one symbol.</mat-error>
+            </mat-form-field>
+
+            <div class="col-lg-12">
+                <button mat-raised-button class="mat-primary" (click)="submit()">Registration</button>
+            </div>
+
+        </div>
+    </div>
+</form>
